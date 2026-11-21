@@ -84,7 +84,7 @@ public class ClientForgeEvents {
         float partial = event.getPartialRenderTick();
         Minecraft.getInstance().getEntityRenderDispatcher().render(d, 0, 0, 0,
                 Mth.lerp(partial, p.yRotO, p.getYRot()), partial,
-                event.getPoseStack(), event.getBuffers(), event.getLight());
+                event.getMatrixStack(), event.getBuffers(), event.getLight());
     }
 
     /** Hide the vanilla first-person arm while in giant form. */
